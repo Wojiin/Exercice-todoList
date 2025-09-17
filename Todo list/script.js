@@ -1,4 +1,6 @@
+/* On attribue countSpan aux éléments .count*/
 const countSpan = document.querySelector(".count");
+/* On défini une variable qui donnera à afficher sa valeur à countSpan */
 count = 1;
 countSpan.textContent = count;
 
@@ -8,13 +10,13 @@ const addBtn = document.querySelector("#btn");
 /*On observe l'évènement ( méthode addEventListener) "click" sur addBtn pour déclencher la fonction addTask */
 addBtn.addEventListener("click", addTask);
 
-/* On sélectionne l'élément avec la class=todoCard et on lui donne comme valeur à la constante taskCard*/
+/* On sélectionne l'élément avec la class=todoCard et on lui donne comme valeur la constante taskCard*/
 const taskCard = document.querySelector(".todoCard");
 
-/* On sélectionne l'élément avec l'identifiant todoCards et on lui donne comme valeur à la constante taskContainer*/
+/* On sélectionne l'élément avec l'identifiant todoCards et on lui donne comme valeur la constante taskContainer*/
 const tasksContainer = document.querySelector("#todoCards");
 
-/* On sélectionne l'élément avec l'attribut class=delBtn et on lui donne comme valeur à la constante delBtn*/
+/* On sélectionne l'élément avec l'attribut class=delBtn et on lui donne comme valeur la constante delBtn*/
 const delBtn = document.querySelector(".delBtn");
 
 /* On observe l'évènement "click" sur la constante delBtn pour appeler la fonction argumentée DeleteTask par le biais d'une fonction callback (function())
@@ -44,7 +46,7 @@ function addTask() {
   /*appendChild permet de créer un nouvel emplacement (noeud) à la suite de la liste des enfants de tasksContainer,
    ici newTask*/
   tasksContainer.appendChild(newTask);
-
+  /*On active la suppression de newTask en cliquant sur la poubelle */
   newDelBtn.addEventListener("click", function () {
     deleteTask(newTask);
   });
