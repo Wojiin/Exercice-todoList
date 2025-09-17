@@ -50,11 +50,6 @@ function addTask() {
   newDelBtn.addEventListener("click", function () {
     deleteTask(newTask);
   });
-
-  tasksContainer.appendChild(newTask);
-  updateCount();
-  count++;
-  countDisplay.textContent = count;
 }
 /* Permet de supprimer l'élément avec l'attribut class=task dans lequel est contenue l'icone trashbin dont l'évènement "click" a été observé */
 function deleteTask(task) {
